@@ -1,3 +1,26 @@
 body{
 	margin: 0;
 }
+
+td{
+	padding-bottom: 15px;
+}
+
+table, #color{
+	border: 5px solid red;
+	text-align: center;
+	padding: 25px;
+}
+
+#color{
+	background-color: blue;
+}
+
+#tool{
+	border: 5px solid red;
+}
+
+img{
+
+	width: 75px;
+}
