@@ -24,12 +24,21 @@ pixel_studio.palette = {
 			li.css('background-color', color.to_string())
 			  .attr('title', color.name);
 			$colors.append(li);
-
 		}
+
+		$('#colors').on('click', 'li', function(e){
+			let cut = pixel_studio.palette;
+			cut.select_color(cut.colors[$(this).index()]);
+			console.log(cut.color_selected);
+			$(".selected_color").toggleClass('selected_color');
+			$(this).toggleClass('selected_color');
+		})
+
 
 		// Couleur par défaut
 		
 		this.select_color(this.colors[0]);
+		$("#colors li").eq(0).toggleClass('selected_color');
 
 		console.log('palette : colors ready');
 	}
