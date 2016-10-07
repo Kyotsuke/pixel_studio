@@ -2,25 +2,50 @@ body{
 	margin: 0;
 }
 
-td{
-	padding-bottom: 15px;
-}
-
-table, #color{
-	border: 5px solid red;
+#palette {
+	position: fixed;
+	left: 10px;
+	top: 10px;
+	width: 35px;
+	padding: 10px;
+	width: 100px;
 	text-align: center;
-	padding: 25px;
+	border-radius: 10px;
+	background-color: #505050;
 }
 
-#color{
-	background-color: blue;
+#tools, #colors  {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
-#tool{
-	border: 5px solid red;
+#tools{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 2px  solid #fff;
 }
 
-img{
+#tools li, #colors li {
+	display: inline-block;
+	width: 26px;
+	height: 26px;
+	padding: 4px;
+	border: 1px solid #666;
+	cursor: pointer;
+	border-radius: 10px;
+}
 
-	width: 75px;
+#tools li{
+	background-image: url(../images/brush.png);
+	background-color: white;
+	background-size: 100%;
+}
+
+#colors li{
+	background-color: red;
+}
+
+#tools li:hover, #colors  li:hover{
+	border: 1.9px solid #000;
 }

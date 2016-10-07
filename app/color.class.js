@@ -7,6 +7,10 @@ class Color{
 	 */
 	constructor(name, color){
 		this.name = name;
-		this.color = color;
+		this.color_rgb = color;
+	}
+
+	to_string(){
+		return "rgb("+this.color_rgb.join(',')+")";
 	}
 }
