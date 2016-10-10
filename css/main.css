@@ -60,3 +60,10 @@ body{
 	border: 2px solid white!important;
 	padding: 10px!important;
 }
+
+#zone_dessin canvas{
+	position: absolute;
+	top: 5px;
+	left:165px;
+	border: 1px solid #aaa;
+}
