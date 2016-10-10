@@ -13,7 +13,12 @@ var pixel_studio = {
 			new Color('firebrick', [178,34,34]),
 			new Color('palegoldenrod', [238,232,170]),
 		];
-		this.palette.init_colors( colors );
+		let tools = [
+			new Tool('brush', 'images/brush.png'),
+			new Tool('eraser', 'images/eraser.png')
+		];
+		this.palette_color.init( colors );
+		this.palette_tool.init( tools );
 
 		console.log('Pixel studio is initiated and ready');
 	}

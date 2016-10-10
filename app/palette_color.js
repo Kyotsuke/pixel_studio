@@ -1,4 +1,4 @@
-pixel_studio.palette = {
+pixel_studio.palette_color = {
 
 	colors: [],
 	color_selected: null,
@@ -7,7 +7,7 @@ pixel_studio.palette = {
 		this.color_selected = color;
 	},
 
-	init_colors: function( color_list ){
+	init: function( color_list ){
 
 		this.colors = color_list;
 
@@ -27,7 +27,7 @@ pixel_studio.palette = {
 		}
 
 		$('#colors').on('click', 'li', function(e){
-			let cut = pixel_studio.palette;
+			let cut = pixel_studio.palette_color;
 			cut.select_color(cut.colors[$(this).index()]);
 			console.log(cut.color_selected);
 			$(".selected_color").toggleClass('selected_color');
