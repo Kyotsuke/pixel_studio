@@ -64,6 +64,7 @@ body{
 #zone_dessin canvas{
 	position: absolute;
 	top: 5px;
-	left:165px;
+	left:160px;
 	border: 1px solid #aaa;
+	cursor: crosshair;
 }

@@ -46,12 +46,36 @@ pixel_studio.canvas = {
 
 		console.log('canvas is ready');
 
+		$('#zone_dessin').on('click', 'canvas', function(e){
+			let p_d = pixel_studio.canvas.pixel_dimension,
+				coordx = parseInt(e.offsetX / p_d),
+				coordy = parseInt(e.offsetY / p_d);
+
+				true_x = coordx + 1;
+				true_y = coordy + 1;
+
+			// console.log(coordx);
+			// console.log(coordy);
+
+			let c = (pixel_studio.palette_tool.tool_selected.name == "pencil") ? pixel_studio.palette_color.color_selected : pixel_studio.palette_color.bg_color;
+			pixel_studio.canvas.draw(true_x, true_y, c);
+		});
+
 	},
 
+	/**
+	 * Dessine un pixel sur la zone de dessin
+	 * @param  {number} x		coordonnées horizontale du pixel
+	 * @param  {number} y		coordonnées verticale du pixel
+	 * @param  {Color} color 	couleur du pixel : instance de Color
+	 */	
 	draw: function(x, y, color){
+		let px = (x-1)*this.pixel_dimension,
+			py = (y-1)*this.pixel_dimension;
+
 		this.context.beginPath();
 		this.context.fillStyle = color.to_string();
-		this.context.rect(x*this.pixel_dimension,y*this.pixel_dimension,this.pixel_dimension,this.pixel_dimension);
+		this.context.rect(px, py, this.pixel_dimension, this.pixel_dimension);
 		this.context.fill();
 	}
 };
